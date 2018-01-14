@@ -46,6 +46,10 @@ app.get('/secret', passport.authenticate('jwt', {'session': false}, (req, res) =
   res.json('ok');
 }));
 app.use(express.static(`${__dirname}/public/static`));
+// app.get('/*', (req, res) => {
+//   res.write(require('fs').readFileSync(__dirname + '/public/static/index.html'));
+//   res.end();
+// });
 app.listen(4444, () => {
   console.log('App up on 4444');
 });

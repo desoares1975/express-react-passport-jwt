@@ -3,11 +3,11 @@
 const gulp = require('gulp');
 const reactEasy = require('gulp-react-easy');
 
-gulp.task('watch', ['jsx', 'watch']);
-gulp.task('watch', () => {
-  gulp.watch('./src/js/**/*', ['jsx']);
+gulp.task('default', ['js', 'w']);
+gulp.task('w', () => {
+  gulp.watch('./src/js/**/*', ['js']);
 });
-gulp.task('jsx', () => {
+gulp.task('js', () => {
   return reactEasy({
     'file': './src/js/app.jsx',
     'debug': true

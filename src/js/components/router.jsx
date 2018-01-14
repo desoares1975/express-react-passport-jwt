@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from './components/home';
+import Home from './home';
+import loginForm from './login-form';
 
 
 const Router = () => {
@@ -8,6 +9,7 @@ const Router = () => {
     <main>
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/login' component={loginForm} />
       </Switch>
     </main>
   );
